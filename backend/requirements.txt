@@ -8,3 +8,5 @@ supabase
 python-multipart
 
 pypdf
+
+sentence_transformers
