@@ -26,3 +26,20 @@ class pending_job(BaseModel):
     document_id: str
     status: str
     created_at: datetime
+
+class QueryRequest(BaseModel):
+    query: str
+    k: int = 5
+    mode: str = "retrieval"
+
+class SourceResult(BaseModel):
+    document_id: str
+    chunk_id: str
+    chunk_index: int
+    score: float
+    preview: str
+    
+class QueryResponse(BaseModel):
+    answer: str | None = None
+    sources: list[SourceResult]
+    mode: str

@@ -14,8 +14,6 @@ router = APIRouter(
 
 @router.post("/upload", response_model=UploadDocumentResponse)
 async def upload_document(file: UploadFile = File(...)):
-    supabase = get_supabase_client()
-
     document_details = await save_uploaded_file(file)
     result = await create_document_record(document_details)
     job_id = await create_job_record(result['id'])
