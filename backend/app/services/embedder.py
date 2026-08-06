@@ -23,4 +23,4 @@ def embed_texts(texts: list[str]) -> list[list[float]]:
         cleaned_texts.append(text.strip())
     model = get_embeddings_model()
     embeddings = model.encode(cleaned_texts)
-    return embeddings
+    return embeddings.tolist()

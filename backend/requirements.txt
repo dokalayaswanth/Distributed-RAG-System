@@ -10,3 +10,4 @@ python-multipart
 pypdf
 
 sentence_transformers
+faiss-cpu

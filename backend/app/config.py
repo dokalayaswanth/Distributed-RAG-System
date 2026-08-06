@@ -19,6 +19,7 @@ class Settings(BaseSettings):
     faiss_index_path: str = "data/faiss_index/index.faiss"
     faiss_metadata_path: str = "data/faiss_index/faiss_metadata.json"
     upload_dir: str = "data/uploads"
+    worker_logs: str = "logs/worker_logs.txt"
 
     top_k_default: int = 4
 

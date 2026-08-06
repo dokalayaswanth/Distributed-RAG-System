@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+from datetime import datetime
 
 
 class UploadDocumentResponse(BaseModel):
@@ -19,3 +20,9 @@ class JobByIdResponse(BaseModel):
     job_id: str
     status: str
     error_message: str | None
+
+class pending_job(BaseModel):
+    job_id: str
+    document_id: str
+    status: str
+    created_at: datetime
